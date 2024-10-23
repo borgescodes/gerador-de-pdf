@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF | BETA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gerador de PDF</h1>
+
+    <form id="invoiceForm">
+        <input type="text" id="product" placeholder="Produto" required>
+        <textarea id="description" rows="4" placeholder="Descrição" required></textarea>
+        <div class="char-count" id="charCount">0/250 caracteres</div>
+        <input type="number" id="value" placeholder="Valor (R$)" required>
+
+        <div class="actions">
+            <button type="submit">Pré-visualizar PDF</button>
+            <button type="button" id="resetForm">Reiniciar</button>
+        </div>
+    </form>
+
+    <iframe id="pdfPreview" title="Pré-visualização do PDF"></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
